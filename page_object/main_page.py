@@ -22,5 +22,6 @@ class MainPage(BasePage):
     def go_to_main_page(self):
         self.go_to_site(Urls.MAIN_URL)
 
+    @allure.step('Принять куки')
     def accept_cookies(self):
         self.click_on_element(LocatorsMainPage.COOKIES_BUTTON)
