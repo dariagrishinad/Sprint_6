@@ -36,3 +36,5 @@ class LocatorsMainPage:
     ]
     TOP_ORDER_BUTTON = (By.XPATH, ".//div[@class = 'Header_Nav__AGCXC']/button[text() = 'Заказать']")
     MIDDLE_ORDER_BUTTON = (By.XPATH, ".//button[contains(@class, 'Button_Middle__1CSJM')]")
+    COOKIES_BUTTON = (By.ID, 'rcc-confirm-button')
+

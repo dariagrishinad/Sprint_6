@@ -2,8 +2,6 @@ import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from locators.locators_base_page import LocatorsBasePage
-
 
 class BasePage:
     def __init__(self, driver):
@@ -21,9 +19,9 @@ class BasePage:
     def click_on_element(self, locator):
         return WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable(locator)).click()
 
-    @allure.step('Принять куки')
-    def accept_cookies(self):
-        return WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(LocatorsBasePage.COOKIES_BUTTON)).click()
+    # @allure.step('Принять куки')
+    # def accept_cookies(self):
+    #     return WebDriverWait(self.driver, 10).until(EC.presence_of_element_located(LocatorsBasePage.COOKIES_BUTTON)).click()
 
     @allure.step('Проскроллить страницу')
     def scroll(self):

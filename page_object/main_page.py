@@ -1,6 +1,7 @@
 import allure
 
 from constants import Urls
+from locators.locators_main_page import LocatorsMainPage
 from page_object.base_page import BasePage
 
 
@@ -20,3 +21,6 @@ class MainPage(BasePage):
     @allure.step('Перейти на главную страницу сайта')
     def go_to_main_page(self):
         self.go_to_site(Urls.MAIN_URL)
+
+    def accept_cookies(self):
+        self.click_on_element(LocatorsMainPage.COOKIES_BUTTON)
